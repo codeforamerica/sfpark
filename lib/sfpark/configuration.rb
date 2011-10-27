@@ -13,7 +13,7 @@ module SfPark
       :user_agent].freeze
 
     DEFAULT_ADAPTER     = Faraday.default_adapter
-    DEFAULT_API_VERSION = 2
+    DEFAULT_API_VERSION = 1
     DEFAULT_USER_AGENT  = "SfPark Ruby Gem #{SfPark::VERSION}".freeze
 
     attr_accessor(*VALID_OPTIONS_KEYS)

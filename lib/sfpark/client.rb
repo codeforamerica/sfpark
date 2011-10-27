@@ -1,3 +1,8 @@
+require 'sfpark/connection'
+require 'sfpark/request'
+
+require 'sfpark/client/availability'
+
 module SfPark
   class Client
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
@@ -8,6 +13,11 @@ module SfPark
         send("#{key}=", options[key])
       end
     end
+
+    include SfPark::Connection
+    include SfPark::Request
+
+    include SfPark::Client::Availability
 
   end
 end

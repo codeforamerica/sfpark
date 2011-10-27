@@ -14,7 +14,7 @@ describe SfPark::Client::Availability do
 
       it "should return search the number of records available" do
         search = @client.availability
-        search.NUM_RECORDS.should == 25
+        search.NUM_RECORDS.should == "25"
       end
     end
   end

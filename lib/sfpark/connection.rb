@@ -4,14 +4,23 @@ module SfPark
   module Connection
     private
 
-    def connection
-      Faraday.new(:url => 'http://api.sfpark.org/sfpark/rest') do |connection|
-        connection.use Faraday::Request::UrlEncoded
-        connection.use Faraday::Response::RaiseError
-        connection.use Faraday::Response::Rashify
-        connection.use Faraday::Response::Mashify
-        connection.use Faraday::Response::ParseJson
-        connection.adapter(Faraday.default_adapter)
+ def connection(options={})
+    merged_options = faraday_options.merge({
+        :headers => {
+          'Accept' => "application/#{response}",
+          'User-Agent' => user_agent
+        },
+        :ssl => {:verify => false},
+        :url => endpoint
+      })
+
+      Faraday.new(merged_options) do |builder|
+        builder.use Faraday::Request::UrlEncoded
+        builder.use Faraday::Response::RaiseError
+        builder.use Faraday::Response::Rashify
+        builder.use Faraday::Response::Mashify
+        builder.use Faraday::Response::ParseJson
+        builder.adapter(Faraday.default_adapter)
       end
     end
   end

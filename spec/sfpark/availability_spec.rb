@@ -8,7 +8,7 @@ describe SfPark::Client::Availability do
   describe "#availability" do
     context "with no query parameters" do
       before do
-        stub_get("availabilityservice").
+        stub_get("availabilityservice?response=json").
           to_return(:status => 200, :body => fixture("availability.json"))
       end
 

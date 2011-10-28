@@ -9,6 +9,7 @@ module SfPark
     def request(method, path, options)
       response = connection.send(method) do |request|
         request.url(path, options)
+        request.params['response'] = 'json'
       end
       response.body
     end

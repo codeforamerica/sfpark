@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.email       = 'ryan@codeforamerica.org'
   gem.executables = `git ls-files -- bin/*`.split("\n").map{|f| File.basename(f)}
   gem.files       = `git ls-files`.split("\n")
-  gem.homepage    = ''
+  gem.homepage    = 'https://github.com/codeforamerica/sfpark'
   gem.name        = 'sfpark'
   gem.require_paths = ['lib']
   gem.summary     = gem.description

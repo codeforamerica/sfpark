@@ -8,7 +8,7 @@ describe SfPark::Client::Availability do
   describe "#availability" do
     context "with no query parameters" do
       before do
-        stub_get("availabilityservice?response=json").
+        stub_get("/availabilityservice?response=json").
           to_return(:status => 200, :body => fixture("availability.json"))
       end
 
@@ -20,7 +20,7 @@ describe SfPark::Client::Availability do
 
     context "with query paramaters" do
       before do
-        stub_get("availabilityservice?lat=37.792275&long=-122.397089&radius=0.25&uom=mile&response=json").
+        stub_get("/availabilityservice?lat=37.792275&long=-122.397089&radius=0.25&uom=mile&response=json").
           to_return(:status => 200, :body => fixture("availability_params.json"))
       end
 

@@ -23,5 +23,5 @@ def fixture(file)
 end
 
 def sfpark_url(url)
-  "http://api.sfpark.org/sfpark/rest/#{url}"
+  "http://api.sfpark.org/sfpark/rest#{url}"
 end

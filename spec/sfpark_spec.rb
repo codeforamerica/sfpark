@@ -19,7 +19,7 @@ describe SfPark do
 
   describe ".delegate" do
     it "should delegate missing methods to SfPark::Client" do
-      stub_get("availabilityservice?response=json").
+      stub_get("/availabilityservice?response=json").
           to_return(:status => 200, :body => fixture("availability.json"))
       records  = SfPark.availability
       records.num_records.should == "25"

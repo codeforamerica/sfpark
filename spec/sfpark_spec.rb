@@ -1,27 +1,27 @@
 require 'helper'
 
-describe SfPark do
+describe SFPark do
   after do
-    SfPark.reset
+    SFPark.reset
   end
 
   describe ".respond_to?" do
     it "should be true if method exists" do
-      SfPark.respond_to?(:new, true).should be_true
+      SFPark.respond_to?(:new, true).should be_true
     end
   end
 
   describe ".new" do
-    it "should be a SfPark::Client" do
-      SfPark.new.should be_a SfPark::Client
+    it "should be a SFPark::Client" do
+      SFPark.new.should be_a SFPark::Client
     end
   end
 
   describe ".delegate" do
-    it "should delegate missing methods to SfPark::Client" do
+    it "should delegate missing methods to SFPark::Client" do
       stub_get("/availabilityservice?response=json").
           to_return(:status => 200, :body => fixture("availability.json"))
-      records  = SfPark.availability
+      records  = SFPark.availability
       records.num_records.should == "25"
     end
   end

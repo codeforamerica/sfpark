@@ -1,4 +1,4 @@
-module SfPark
+module SFPark
   module Request
     def get(path, options={})
       request(:get, path, options)

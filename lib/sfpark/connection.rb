@@ -1,6 +1,6 @@
 require 'faraday_middleware'
 
-module SfPark
+module SFPark
   module Connection
     private
 

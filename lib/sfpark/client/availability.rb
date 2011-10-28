@@ -1,4 +1,4 @@
-module SfPark
+module SFPark
   class Client
     module Availability
 

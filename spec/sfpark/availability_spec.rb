@@ -1,8 +1,8 @@
 require 'helper'
 
-describe SfPark::Client::Availability do
+describe SFPark::Client::Availability do
   before do
-    @client = SfPark.new
+    @client = SFPark.new
   end
 
   describe "#availability" do

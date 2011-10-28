@@ -1,6 +1,6 @@
 require 'sfpark/version'
 
-module SfPark
+module SFPark
   # Defines constants and methods related to configuration
   module Configuration
     # An array of valid keys in the options hash when configuring a {SfPark::API}
@@ -27,7 +27,7 @@ module SfPark
     DEFAULT_PROXY = nil
 
     # The value sent in the 'User-Agent' header if none is set
-    DEFAULT_USER_AGENT = "SFPark Ruby Gem #{SfPark::VERSION}".freeze
+    DEFAULT_USER_AGENT = "SFPark Ruby Gem #{SFPark::VERSION}".freeze
 
     DEFAULT_FARADAY_OPTIONS = {}.freeze
 

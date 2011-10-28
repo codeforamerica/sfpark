@@ -6,7 +6,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.7.0'
   gem.add_dependency 'hashie', '~> 1.1.0'
   gem.add_dependency 'multi_json', '~> 1.0.2'
-  gem.add_dependency 'multi_xml', '~> 0.4.0'
   gem.add_dependency 'rash', '~> 0.3.0'
   gem.add_development_dependency 'rake', '~> 0.9'
   gem.add_development_dependency 'rdiscount', '~> 1.6'
@@ -24,5 +23,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.summary     = %q{TODO: Write a gem summary}
   gem.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.version     = SfPark::VERSION
+  gem.version     = SFPark::VERSION
 end

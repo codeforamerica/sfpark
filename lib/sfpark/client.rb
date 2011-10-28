@@ -3,21 +3,21 @@ require 'sfpark/request'
 
 require 'sfpark/client/availability'
 
-module SfPark
+module SFPark
   class Client
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
 
     def initialize(options={})
-      options = SfPark.options.merge(options)
+      options = SFPark.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end
     end
 
-    include SfPark::Connection
-    include SfPark::Request
+    include SFPark::Connection
+    include SFPark::Request
 
-    include SfPark::Client::Availability
+    include SFPark::Client::Availability
 
   end
 end
